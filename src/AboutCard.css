@@ -1,0 +1,95 @@
+.about_card {
+  width: 35%;
+  height: 617px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+  /* font-family: monospace; */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.nft_img {
+  margin: 20px auto;
+  height: 350px;
+  width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.nft_img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.nft_eth {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.nft_moon {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.nft_num {
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.nft_button {
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 40px;
+  border-radius: 41px;
+  margin: 15px auto;
+  cursor: pointer;
+  background-color: #ff2d62;
+  color: #f4f4f4;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 0 20px rgb(250 35 87 / 70%);
+  transition: 0.3s ease-in-out;
+}
+
+.btn_pri {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn:hover {
+  box-shadow: -7px -9px 89px 0px rgba(255, 0, 61, 0.7);
+  -webkit-box-shadow: -7px -9px 89px 0px rgba(255, 0, 61, 0.7);
+  -moz-box-shadow: -7px -9px 89px 0px rgba(255, 0, 61, 0.7);
+  background-color: #ff658b;
+}
+
+.sp_about {
+  font-size: 16px;
+}
+
+.fas {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .about_card {
+    width: 90%;
+    height: auto;
+    margin: 150px auto 30px;
+    border-radius: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

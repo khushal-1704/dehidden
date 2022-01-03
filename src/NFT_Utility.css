@@ -1,0 +1,36 @@
+.nft_utility {
+  cursor: pointer;
+  width: 85%;
+  padding: 10px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.utility_img {
+  margin-right: 15px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(40, 40, 40, 0.5254901960784314);
+}
+
+.utility_content {
+}
+
+.utility_pri {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 500px) {
+  .utility_sec {
+    display: none;
+  }
+}

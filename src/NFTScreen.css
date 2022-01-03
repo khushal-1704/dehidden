@@ -1,0 +1,25 @@
+.nftScreen {
+  display: flex;
+  width: 100%;
+}
+
+.sng_logo {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 10;
+}
+
+.sng_logo img {
+  height: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .sng_logo {
+    display: none;
+  }
+  .nftScreen {
+    flex-direction: column;
+    align-items: center;
+  }
+}
