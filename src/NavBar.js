@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './NavBar.css'
-import ClipboardJS from "clipboard";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-new ClipboardJS(".button");
 
 function NavBar() {
     const [show, handleShow] = useState(false);
+    const [value, setValue] = useState('https://run.mocky.io/v3/8321cc85-81e6-45c6-bd23-33e85c504c7d')
+    const [copy, setCopy] = useState(false)
 
     const transitionNavBar = () => {
         if (window.scrollY > 10) {
@@ -22,6 +23,12 @@ function NavBar() {
 
     const handleClick = () => {
         console.log('clicked')
+        setCopy(true)
+        setTimeout(() => {
+            setCopy(false)
+            console.log(copy)
+        }, 2500)
+
     }
 
     return (
@@ -31,17 +38,20 @@ function NavBar() {
             </div>
             <div className="nav_right">
                 <div className="linkbar">
-                    <div className='clip'>Copied to Clipboard</div>
-                    <div className='linktext'>https://run.mocky.io/v3/8321cc85-81e6-45c6-bd23-33e85c504c7d</div>
-                    <button className='btn btn_copy' data-clipboard-action="copy"
-                        data-clipboard-target=".linktext">
-                        <i className="fas fa-copy"></i>
-                        Copy
-                    </button>
+                    <div className='clip' style={{ display: copy ? 'block' : 'none' }} >Copied to Clipboard</div>
+                    <input className='linktext' value={value} readOnly ></input>
+                    <CopyToClipboard onCopy={handleClick} text={value}>
+                        <button className='btn btn_copy' >
+                            <i className="fas fa-copy"></i>
+                            <span>Copy</span>
+                        </button>
+                    </CopyToClipboard>
                 </div>
             </div>
             <div className="nav_mov">
-                <button className='btn btn_share'>Share</button>
+                <CopyToClipboard onCopy={handleClick} text={value} >
+                    <button className='btn btn_share'>Share</button>
+                </CopyToClipboard>
             </div>
         </div>
     )
